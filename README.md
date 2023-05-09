@@ -1,5 +1,9 @@
 # Lista-de-Tarefas: foi implementado uma lista de tarefas web em java utilizando o spring boot juntamente com html, css, javascrpit e suas bibliotecas.
 
+Execução: para subir o site deve ir no arquivo "TaskApplication.java" que está localizado em "Task/task/src/main/TaskApplication.java" e clicar onde está o circulo em vermelho:
+![Iniciar](https://github.com/thallestw135/Lista-de-Tarefas/assets/69612633/f7999d8d-f8a5-4396-b184-a470a54ec971).
+O site terá a url "http://localhost:8080/tasks", basta colocar essa url no seu navegador.
+
 Recursos: existe alguns recursos básicos no site como, adicionar, excluir toda a lista apresentando uma tela de confirmação, excluir apenas uma tarefa e 
 um botão de verificação se a tarefa já foi concluída apresentando um risco ao selecioná-lo.
 
