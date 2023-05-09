@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="to-do">
+    <form>
+        <div class="header">
+            <p>Lista de Tarefas</p>
+            <button id="delete-all-button"><i class='bx bxs-trash-alt'></i></button>
+        </div>
+    </form>
+    <hr/>
+    <br />
+    <form action="/tasks" method="post">
+        <div class="divInsert">
+            <input class="textInsert" type="text" name="name" />
+            <button><i class='bx bx-plus'></i></button>
+        </div>
+    </form>
+    <table>
+      <tr th:each="taskslist : ${taskslist}">
+        <td><input style="cursor: pointer;" type="checkbox"></td>
+        <td th:text="${taskslist.name}"></td>
+        <td>
+          <a th:href="@{/tasks/delete/{id}(id=${taskslist.id})}"><i class='bx bxs-trash-alt' style="color: black;"></i></a>
+        </td>
+        
+      </tr>
+    </table>
+    <ul></ul>
+  </div>
+
+  
+  <div id="confirmation-dialog" style="display: none;">
+    <p>Tem certeza de que deseja excluir todas as tarefas?</p>
+    <button id="yes-button">Sim</button>
+    <button id="no-button">Nao</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
